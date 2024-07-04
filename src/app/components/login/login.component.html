@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Iniciar Sesión</h3>
+
+                    <form [formGroup]="form">
+                        <fieldset>
+                            <legend></legend>
+                            <div class="form-field">
+                                <label>Usuario:</label>
+                                <input name="user" formControlName="user" class="form-control" #userField>
+                                <div class="help-block m-1">
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label>Password:</label>
+                                <input name="password" formControlName="password" type="password" class="form-control" />
+                            </div>
+                        </fieldset>
+                        <div class="form-buttons">
+                            <button class="btn btn-lg btn-google btn-block text-uppercase" (click)="login()">
+                Iniciar sesion
+              </button>
+                        </div>
+                        <div class="form-buttons">
+                            <button class="btn btn-lg btn-google btn-block text-uppercase" (click)="ReguistrarUser()">
+                                Regístrate
+              </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

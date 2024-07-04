@@ -1,0 +1,54 @@
+<div class=" card card-user">
+    <h1 class=" title author">Detalle de Empleo</h1>
+    <div class=" card-body">
+        <p class=" card-text"></p>
+        <div class=" author">
+            <div class=" block block-one"></div>
+            <div class=" block block-two"></div>
+            <div class=" block block-three"></div>
+            <div class=" block block-four"></div>
+            <a href="javascript:void(0)">
+                <img alt="..." class=" avatar" src="assets/img/work.jpg" />
+
+                <h1 class=" title">{{ empleo?.Nombre }}</h1>
+            </a>
+            <p class=" description">{{ empleo?.Descripcion }}</p>
+        </div>
+        <div class="row" style="margin-top: 10%;">
+            <div class=" col-md-6">
+                <p>Lugar: {{ empleo?.ciudad?.nombre }}</p>
+            </div>
+            <div class=" col-md-6">
+                <p>Direccion: {{ empleo?.Direccion }}</p>
+            </div>
+           
+        </div>
+        <div class=" row">
+            <div class=" col-md-6">
+                <p>Categoria: {{ empleo?.categoria.descripcion }}</p>
+            </div>
+            <div class=" col-md-6">
+                <p>Experiencia: {{ empleo?.ExperienciaRequerida }}</p>
+            </div>
+        </div>
+
+        <div class=" row">
+            <div class=" col-md-6">
+                <p>Modalidad: {{ empleo?.ModoEmpleo }}</p>
+            </div>
+            <div class=" col-md-6">
+                <p>Horario: {{ empleo?.TipoHorarion }}</p>
+            </div>
+        </div>
+        <div class=" row">
+            <div class=" col-md-12">
+                    <p>Carreras Afines: {{ empleo?.CarrerasAfines }}</p>
+            </div>
+        </div>
+    </div>
+    <div class=" card-footer">
+        <div class=" button-container">
+            <button class=" btn btn-fill btn-success">Postular</button>
+        </div>
+    </div>
+</div>

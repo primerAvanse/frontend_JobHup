@@ -1,0 +1,15 @@
+export const CONCEPTS_COLS = {
+    CONCEPTO: 'nameConcept',
+    ENERO: 'enero',
+    FEBRERO: 'febrero',
+    MARZO: 'paisIso',
+    ABRIL: 'abril',
+    MAYO: 'mayo',
+    JUNIO: 'junio',
+    JULIO: 'julio',
+    AGOSTO: 'agosto',
+    SETIEMBRE: 'setiembre',
+    OCTUBRE: 'octubre',
+    NOVIEMBRE: 'noviembre',
+    DICIEMBRE: 'diciembre',
+  };

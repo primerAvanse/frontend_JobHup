@@ -1,0 +1,123 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Registrar Usuario</h3>
+
+                    <form [formGroup]="form">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Datos personales</h5>
+                                        <div class="form-group">
+                                            <label for="txtNombre" class="form-label">Nombre</label>
+                                            <input type="text" id="txtNombre" name="txtNombre"
+                                                formControlName="txtNombre" class="form-control"
+                                                placeholder="Agregar su nombre">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtApePaterno" class="form-label">Apellido paterno</label>
+                                            <input type="text" id="txtApePaterno" name="txtApePaterno"
+                                                formControlName="txtApePaterno" class="form-control"
+                                                placeholder="Agregar apellido paterno">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtApeMaterno" class="form-label">Apellido materno</label>
+                                            <input type="text" id="txtApeMaterno" name="txtApeMaterno"
+                                                formControlName="txtApeMaterno" class="form-control"
+                                                placeholder="Agregar apellido materno">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtDni" class="form-label">Dni</label>
+                                            <input type="text" id="txtDni" name="txtDni" formControlName="txtDni"
+                                                class="form-control" placeholder="Agregar numero dni">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtFechaNacimineto" class="form-label">Fecha de
+                                                nacimiento</label>
+                                            <input type="text" id="txtFechaNacimineto" name="txtFechaNacimineto"
+                                                formControlName="txtFechaNacimineto" class="form-control"
+                                                placeholder="Agregar su fecha de nacimiento">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtSexo" class="form-label">Sexo</label>
+                                            <input type="text" id="txtSexo" name="txtSexo" formControlName="txtSexo"
+                                                class="form-control" placeholder="Agregar sexo F o M">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Datos de comunicación</h5>
+                                        <div class="form-group">
+                                            <label for="txtTelefono" class="form-label">Teléfono</label>
+                                            <input type="text" id="txtTelefono" name="txtTelefono"
+                                                formControlName="txtTelefono" class="form-control"
+                                                placeholder="Agregar numero de telefono">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtCorreo" class="form-label">Correo</label>
+                                            <input type="text" id="txtCorreo" name="txtCorreo"
+                                                formControlName="txtCorreo" class="form-control"
+                                                placeholder="Agregar E-mail">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="txtDireccion" class="form-label">Dirección</label>
+                                            <input type="text" id="txtDireccion" name="txtDireccion"
+                                                formControlName="txtDireccion" class="form-control"
+                                                placeholder="Agregar su dirección">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Datos de Usuario</h5>
+                                        <div class="form-group">
+                                            <label for="user" class="form-label">Usuario</label>
+                                            <input type="text" id="user" name="user" formControlName="user"
+                                                class="form-control" placeholder="Agregar nombre de usuario">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="text" id="password" name="password" formControlName="password"
+                                                class="form-control" placeholder="Agregar contraseña">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </form>
+
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="button" class="btn btn-outline-primary mx-2"
+                            (click)="onRegistrarUsuario()">Registrar</button>
+                        <button type="button" class="btn btn-success mx-2">Login</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

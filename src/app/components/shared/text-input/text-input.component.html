@@ -1,0 +1,7 @@
+<div class="validation-container">
+    <input [ngClass]="parentGroupErrors || 
+          (controlDir && controlDir.control && controlDir.control.touched && !controlDir.control.valid) ?
+          'is-invalid' : null" [type]="type" [disabled]="disabled" [attr.maxLength]="maxLength !== null ? maxLength : null" (input)="onChange($event.target.value)" (blur)="onTouched()" #input class="form-ctrl" placeholder="{{ label }}" />
+    <app-error-messages-container [control]="controlDir">
+    </app-error-messages-container>
+</div>

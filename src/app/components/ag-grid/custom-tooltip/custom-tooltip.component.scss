@@ -1,0 +1,16 @@
+:host {
+    position: absolute;
+    width: 20rem; // If you remove this, the div will so large it won't fit in the available space
+    padding: 1.5rem;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+:host.ag-tooltip-hiding {
+    opacity: 0;
+}
+
+.custom-tooltip p {
+    margin: 5px;
+    // white-space: nowrap;
+}

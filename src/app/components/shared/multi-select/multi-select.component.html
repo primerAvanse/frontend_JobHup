@@ -1,0 +1,54 @@
+<div class="validation-container">
+    <ng-select bindLabel="name" bindValue="id" [placeholder]="placeHolder" [ngClass]="
+      controlDir && controlDir.control && controlDir.control.touched
+        ? !controlDir.control.valid
+          ? 'is-invalid'
+          : null
+        : null
+    " [multiple]="true" [clearable]="clearable" [items]="optionItems" [disabled]="disabled" [closeOnSelect]="false" [ngModel]="selectedValues" (change)="onSelectionChange($event)" (blur)="onTouched()">
+        <ng-template ng-header-tmp let-items="items" *ngIf="showSelectAll">
+            <input type="checkbox" [checked]="
+          optionItems.length === this.selectedValues.length &&
+          this.optionItems.length > 0
+        " (change)="toggleCheckAll($event)" />
+            <span class="ml-2">{{ "(Todos)" }}</span>
+        </ng-template>
+
+        <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+            <ng-container *ngIf="
+          items.length > 0 && items.length !== optionItems.length;
+          then moreThanOneTemplate;
+          else allTemplate
+        ">
+            </ng-container>
+            <ng-template #moreThanOneTemplate>
+                <div class="ng-value">
+                    <span class="ng-value-label label-multi">{{
+            "(" + items.length + " items)"
+          }}</span>
+                </div>
+            </ng-template>
+            <ng-template #allTemplate>
+                <div class="ng-value">
+                    <span class="ng-value-label label-multi">{{ "(Todos)" }}</span>
+                </div>
+            </ng-template>
+        </ng-template>
+
+        <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+            <input id="item-{{ index }}" type="checkbox" [checked]="item$.selected" />
+            <span class="ml-2 option-text" [title]="item.name">{{ item.name }}</span>
+        </ng-template>
+
+        <ng-template ng-footer-tmp *ngIf="showFooter">
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn-first btn-xs px-4" (click)="onAccept()">
+          Aceptar
+        </button>
+            </div>
+        </ng-template>
+    </ng-select>
+
+    <app-error-messages-container [control]="controlDir">
+    </app-error-messages-container>
+</div>

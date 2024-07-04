@@ -1,0 +1,9 @@
+<form [formGroup]="multiselectForm" class="mood" (keydown)="onKeyDown($event)">
+  <app-multi-select #container
+    formControlName="multiselection"
+    [showFooter]="true"
+    [optionItems]="options"
+    [placeHolder]="'Seleccione...'"
+    (acceptEvent)="onAccept()">
+  </app-multi-select>
+</form>

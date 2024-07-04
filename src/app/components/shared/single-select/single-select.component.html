@@ -1,0 +1,19 @@
+<div class="validation-container">
+  <ng-select
+    bindValue="id"
+    bindLabel="name"
+    [items]="optionItems"
+    [clearable]="clearable"
+    [disabled]="disabled"
+    [placeholder]="placeHolder"
+    [ngClass]="controlDir && controlDir.control && controlDir.control.touched
+        ? !controlDir.control.valid ? 'is-invalid' : null
+        : null"
+    [ngModel]="selectedValue"
+    (change)="onSelectionChange($event)"
+    (blur)="onTouched()">
+  </ng-select>
+  <app-error-messages-container
+    [control]="controlDir">
+  </app-error-messages-container>
+</div>
